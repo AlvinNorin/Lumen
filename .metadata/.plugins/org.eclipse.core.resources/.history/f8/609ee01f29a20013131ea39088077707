@@ -1,0 +1,42 @@
+/**
+ *	**	**	**	**	**	**	**	**
+ * 	Kernel.java
+ * 	_3D
+ *	**	**	**	**	**	**	**	**
+ *
+ * 	Author		:		alvin
+ * 	Year		:		2014
+ * 	Time		:		5:25:05 PM
+ * 
+ *	**	**	**	**	**	**	**	**
+ */
+package _3D;
+
+/**
+ * @author alvin
+ */
+
+public class Kernel {
+	
+	static boolean update = false;
+
+	public static void init() {
+		System.out.println("Initializing 3D..");
+		
+	}
+	
+	public static void update(int state) {
+		boolean True = false;
+		if (state == 1) {
+			update = true;
+			True = true;
+		} else if (state == 0) {
+			if (update == true) {
+				True = true;
+			}
+		} if (True) {
+			
+		}
+	}
+	
+}

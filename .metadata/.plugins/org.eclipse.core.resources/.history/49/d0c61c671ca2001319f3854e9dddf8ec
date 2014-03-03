@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package net.lumen.main;
+
+import org.lwjgl.LWJGLException;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+
+import static org.lwjgl.opengl.GL11.*;
+
+/**
+ * @author alvin
+ *
+ */
+public class main {
+
+	/**
+	 * @param args
+	 * @throws LWJGLException 
+	 */
+	public static void main(String[] args) throws LWJGLException {
+		create();
+	}
+	
+	static void create() throws LWJGLException {
+		Display.setTitle("LWJGL");
+		Display.setResizable(true);
+		Display.setDisplayMode(new DisplayMode(1280, 800));
+		Display.setVSyncEnabled(true);
+		Display.create();
+		glViewport(0, 0, Display.getWidth(), Display.getHeight());
+		glDisable(GL_DEPTH_TEST);
+		glEnable(GL_BLEND);
+		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+		glClearColor(0f, 0f, 0f, 0f);
+		while (!Display.isCloseRequested()) {
+			Display.update();
+			Display.sync(60);
+		}
+	}
+
+}

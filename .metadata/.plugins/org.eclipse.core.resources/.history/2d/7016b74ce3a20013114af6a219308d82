@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package net.lumen.main;
+
+import org.lwjgl.LWJGLException;
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.DisplayMode;
+
+import static org.lwjgl.opengl.GL11.*;
+
+/**
+ * @author alvin
+ *
+ */
+public class main {
+
+	/**
+	 * @param args
+	 * @throws LWJGLException 
+	 */
+	public static void main(String[] args) {
+		create();
+	}
+	
+	static void create() {
+System.out.print("Hello world!\n");
+	}
+
+}

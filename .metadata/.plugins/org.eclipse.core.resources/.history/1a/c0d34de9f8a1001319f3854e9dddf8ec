@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package net.lumen.main;
+
+import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.GL11;
+
+/**
+ * @author alvin
+ *
+ */
+public class main {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		GL11.glViewport(0, 0, Display.getWidth(), Display.getHeight());
+	}
+
+}

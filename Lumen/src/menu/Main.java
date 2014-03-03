@@ -20,23 +20,19 @@ import game.Text;
  */
 public class Main {
 	
-	static boolean start = false;
+	static boolean load = false;
 	
 	public static void update() {
-		if (!start) {
+		if (!load) {
 			load();
-			start = true;
 		}
-		Menu.update();
+		FB.update();
 		Settings.update();
 		singleplayer.Dev.update();
 	}
 	
 	public static void load() {
-		GUI.MenuWork.Load();
-		Button.loadTextures();
-		Text.load();
-		GUI.Texture.load("dirt", "PNG", "res/textures/dirt.png");
+		load = true;
 	}
 	
 }

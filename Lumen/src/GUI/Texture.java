@@ -23,8 +23,8 @@ import org.newdawn.slick.util.ResourceLoader;
  * @author Alvin
  */
 public class Texture {
-	static String[] tex_name = new String[100];
-	static org.newdawn.slick.opengl.Texture[] texture_index = new org.newdawn.slick.opengl.Texture[100];
+	static String[] tex_name = new String[128];
+	static org.newdawn.slick.opengl.Texture[] texture_index = new org.newdawn.slick.opengl.Texture[128];
 	
 	static int textures = 0;
 	
@@ -58,6 +58,8 @@ public class Texture {
 			y2 = y+height;
 		Texture.find(name).bind();
 		c.bind();
+		if (height == 0) y2 = y+Texture.find(name).getImageHeight();
+		if (width == 0) x2 = x+Texture.find(name).getImageWidth();
 		GL11.glBegin(GL11.GL_POLYGON);
 			GL11.glTexCoord2f(0, 0);
 	    	GL11.glVertex2f(x, y);

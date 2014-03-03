@@ -37,9 +37,10 @@ public class Main {
 	
 	static void initGL(){
 		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		glOrtho(0, Display.getWidth(), 0, Display.getHeight(), 1, -1);
+		//glOrtho(-1, 1, -1, 1, 1, -1);
 		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		glOrtho(-1, Display.getWidth(), -1, Display.getHeight(), 1, -1);
 		
 		glShadeModel(GL_SMOOTH);
 		glEnable(GL_TEXTURE_2D);
@@ -74,7 +75,7 @@ public class Main {
 	}
 		
 	public static void main(String[] args) {
-		Screen.create("Tower-defence", 100, 100, true);
+		Screen.create("Flappybird", 100, 100, true);
 		try {
 			Keyboard.create();
 		} catch (LWJGLException e) {
@@ -94,13 +95,13 @@ public class Main {
 		
 		//GUI.MenuWork.update();
 		if (!started) {
-			menu.Main.update();
+			game.load.startup();
 		} else {
 			menu.Main.update();
 		}
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_ESCAPE)){
-			System.exit(0);
+			System.exit(1);
 		}
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_Q)){
@@ -114,6 +115,10 @@ public class Main {
 		if (Keyboard.isKeyDown(Keyboard.KEY_HOME)){
 			GUI.Destroy.menus(false);
 			menu.Menu.start();
+		}
+		
+		if (Keyboard.isKeyDown(Keyboard.KEY_END)){
+			started = false;
 		}
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_F11)) {

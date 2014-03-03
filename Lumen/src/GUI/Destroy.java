@@ -20,6 +20,7 @@ public class Destroy {
 	public static void menus(boolean music) {
 		menu.Menu.destroy(music);
 		menu.Settings.destroy(music);
+		menu.FB.destroy(true);
 	}
 	
 }

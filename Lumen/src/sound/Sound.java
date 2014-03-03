@@ -24,8 +24,8 @@ import org.newdawn.slick.util.ResourceLoader;
  */
 public class Sound {
 	
-	private static String[] audio_name = new String[100];;
-	private static Audio[] audio_index = new Audio[100];
+	private static String[] audio_name = new String[127];
+	private static Audio[] audio_index = new Audio[127];
 	private static int audio_total;
 	
 	static Random r = new Random();

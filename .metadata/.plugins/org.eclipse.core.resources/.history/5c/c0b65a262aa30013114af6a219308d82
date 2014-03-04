@@ -1,0 +1,50 @@
+/**
+ *	**	**	**	**	**	**	**	**
+ * 	load.java
+ * 	game
+ *	**	**	**	**	**	**	**	**
+ *
+ * 	Author		:		alvin
+ * 	Year		:		2014
+ * 	Time		:		10:26:27 PM
+ * 
+ *	**	**	**	**	**	**	**	**
+ */
+package game;
+
+import org.lwjgl.opengl.Display;
+import org.newdawn.slick.Color;
+
+import GUI.Button;
+
+/**
+ * @author alvin
+ */
+public class load {
+	
+	static boolean load = false;
+	static int step = 0;
+
+	public static void startup() {
+		if (!load) {
+			load_startup();
+		} GUI.Background.draw("stonebrick");
+		GUI.Texture.draw("mojang", Color.blue, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()/2)), ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()/2)), 0, 0);
+		GUI.Texture.draw("redstone_lamp_off", Color.white, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()))+128, ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()-64)), 64, 64);
+		GUI.Texture.draw("redstone_lamp_off", Color.white, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()))+256, ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()-64)), 64, 64);
+		game.Main.started = true;
+	}
+	
+	public static void load_startup() {
+		GUI.Texture.load("stonebrick", "PNG", "res/textures/stonebrick.png");
+		GUI.Texture.load("mojang", "PNG", "res/textures/mojang.png");
+		GUI.Texture.load("redstone_lamp_off", "PNG", "res/textures/redstone_lamp_off.png");
+		GUI.Texture.load("redstone_lamp_on", "PNG", "res/textures/redstone_lamp_on.png");
+		GUI.MenuWork.Load();
+		Button.loadTextures();
+		Text.load();
+		GUI.Texture.load("dirt", "PNG", "res/textures/dirt.png");
+		load = true;
+	}
+	
+}

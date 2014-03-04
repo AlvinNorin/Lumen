@@ -1,0 +1,20 @@
+/**
+ *	**	**	**	**	**	**	**	**
+ * 	load.java
+ * 	game
+ *	**	**	**	**	**	**	**	**
+ *
+ * 	Author		:		alvin
+ * 	Year		:		2014
+ * 	Time		:		10:26:27 PM
+ * 
+ *	**	**	**	**	**	**	**	**
+ */
+package game;
+
+/**
+ * @author alvin
+ */
+public class load {
+
+}

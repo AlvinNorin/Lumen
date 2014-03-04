@@ -1,0 +1,28 @@
+/**
+ *	**	**	**	**	**	**	**	**
+ * 	load.java
+ * 	game
+ *	**	**	**	**	**	**	**	**
+ *
+ * 	Author		:		alvin
+ * 	Year		:		2014
+ * 	Time		:		10:26:27 PM
+ * 
+ *	**	**	**	**	**	**	**	**
+ */
+package game;
+
+/**
+ * @author alvin
+ */
+public class load {
+
+	public static void startup() {
+		GUI.Texture.load("stonebrick", "PNG", "res/textures/stonebrick.png");
+	}
+	
+	public static void load_startup() {
+		
+	}
+	
+}

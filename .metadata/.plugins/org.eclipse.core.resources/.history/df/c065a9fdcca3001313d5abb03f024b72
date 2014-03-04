@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package TCPClient;
+
+/**
+ * @author alvin
+ *
+ */
+import java.io.*;
+import java.net.*;
+
+public class TCPClient {
+	public static void main(String[] args) throws IOException {
+		Socket MyClient;
+		try {
+			MyClient = new Socket("Machine name", PortNumber);
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+	}
+}
+

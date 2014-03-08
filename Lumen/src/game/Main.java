@@ -98,6 +98,7 @@ public class Main {
 			game.load.startup();
 		} else {
 			menu.Main.update();
+			time.Time.updateFPS();
 		}
 		
 		if (Keyboard.isKeyDown(Keyboard.KEY_ESCAPE)){

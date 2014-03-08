@@ -27,6 +27,7 @@ public class FB {
 	public static void update() {
 		if (update) {
 			Sound.random("random", 1f, "OGG", "res/sound/music", 11);
+			//Sound.random("random", 1f, "OGG", "res/sound/music/records", 11);
 			GUI.Background.draw("dirt");
 			GUI.Button.draw("PLAY", "PLAY!", Display.getWidth()/2-64*3, Display.getHeight()/2-64, 3, 1, "planks_oak", 3, 128);
 			if (GUI.Button.isButtonClicked("PLAY")) {

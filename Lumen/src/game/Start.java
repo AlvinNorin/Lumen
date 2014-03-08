@@ -22,7 +22,7 @@ public class Start {
 	static boolean started = false;
 	
 	public static void main(String[] args) throws InterruptedException, LWJGLException{
-		if (started == false) {
+		if (!started) {
 			GUI.Texture.load("dirt", "PNG", "");
 		}
 	}

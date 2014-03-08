@@ -24,6 +24,7 @@ public class Menu {
 	public static void update() {
 		if (update) {
 			Sound.random("random", 1f, "OGG", "res/sound/music", 11);
+			//Sound.random("random", 1f, "OGG", "res/sound/music/records", 11);
 			GUI.Background.draw("dirt");
 			GUI.Button.draw("Main_Singleplayer", "PLAY!", GUI.Coordinates.x/2-96, GUI.Coordinates.y/2, 3, 1, "planks_oak", 3, 64);
 			GUI.Button.draw("Main_Multiplayer", "MULTIPLAYER", GUI.Coordinates.x/2-96, GUI.Coordinates.y/2-100, 3, 1, "planks_oak", 3, 64);
@@ -43,6 +44,7 @@ public class Menu {
 	
 	public static void destroy(boolean Music) {
 		update = false;
+		
 	}
 	
 	public static void start() {

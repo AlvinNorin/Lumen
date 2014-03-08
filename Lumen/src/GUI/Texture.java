@@ -57,7 +57,7 @@ public class Texture {
 			x2 = x+width;
 			y2 = y+height;
 		Texture.find(name).bind();
-		Color.blue.bind();
+		c.bind();
 		if (height == 0) y2 = y+Texture.find(name).getImageHeight();
 		if (width == 0) x2 = x+Texture.find(name).getImageWidth();
 		GL11.glBegin(GL11.GL_POLYGON);

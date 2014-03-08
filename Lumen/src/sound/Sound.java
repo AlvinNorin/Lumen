@@ -34,7 +34,7 @@ public class Sound {
 		int counter = 0;
 		while (name!=audio_name[counter]&&counter<=audio_total) {
 			counter++;
-		}if (name!=audio_name[counter]) {
+		} if (name!=audio_name[counter]) {
 			audio_index[counter]=audio_index[audio_total];
 		}
 		return audio_index[counter];
@@ -118,8 +118,9 @@ public class Sound {
 		return r.nextInt(max);
 	}
 	
-	static boolean random_begin = false;
+	public static boolean random_begin = false;
 	public static void random(String name, float speed, String type, String location, int max) {
+		//try {
 		if (!random_begin) {
 			Sound.load(name, type, location+"/"+rand(max)+".ogg");
 			Sound.stream(name, speed, false);
@@ -132,6 +133,10 @@ public class Sound {
 				Sound.load(name, type, location+"/"+rand(max)+".ogg");
 			}
 		}
+		//} catch (NullPointerException e) {
+			//System.out.print("Reloading..");
+			boolean random_begin = false;
+		//}
 	}
 	
 }

@@ -27,10 +27,11 @@ public class load {
 	static Color step1 = Color.transparent, step2 = Color.transparent, step3 = Color.transparent, step4 = Color.transparent;
 
 	public static void startup() {
+		time.Time.start();
 		if (!load) {
 			load_startup();
 		} GUI.Background.draw("stonebrick");
-		GUI.Texture.draw("mojang", Color.transparent, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()/2)), ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()/2)), 0, 0);
+		GUI.Texture.draw("mojang", Color.white, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()/2)), ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()/2)), 0, 0);
 		GUI.Texture.draw("redstone_lamp_off", Color.black, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()))+128, ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()-64)), 64, 64);
 		GUI.Texture.draw("redstone_lamp_off", Color.white, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()))+192, ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()-64)), 64, 64);
 		GUI.Texture.draw("redstone_lamp_off", Color.white, ((Display.getWidth()/2)-(GUI.Texture.find("mojang").getImageWidth()))+256, ((Display.getHeight()/2)-(GUI.Texture.find("mojang").getImageHeight()-64)), 64, 64);
@@ -55,6 +56,10 @@ public class load {
 		Text.load();
 		step4 = Color.white;
 		GUI.Texture.load("dirt", "PNG", "res/textures/dirt.png");
+		GUI.Texture.load("gubbe_front", "PNG", "res/gubbe 1.png");
+		GUI.Texture.load("gubbe_side", "PNG", "res/gubbe 2.png");
+		GUI.Texture.load("gubbe_back", "PNG", "res/gubbe 3.png");
+		GUI.Texture.load("grass", "PNG", "res/grass.png");
 		load = true;
 	}
 	

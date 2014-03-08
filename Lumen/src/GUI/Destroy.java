@@ -21,6 +21,7 @@ public class Destroy {
 		menu.Menu.destroy(music);
 		menu.Settings.destroy(music);
 		menu.FB.destroy(true);
+		sound.Sound.stop("random");
 	}
 	
 }
